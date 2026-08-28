@@ -20,7 +20,11 @@ See [the PRD](docs/PRD.md), [architecture overview](docs/architecture/overview.m
 ArchGauge will use Bun for workspace commands and Node.js 24 LTS in production. The repository currently contains only its product and engineering foundation, so there are no application dependencies to install yet.
 
 ```bash
+git diff --check
 git diff --cached --check
+git diff --check origin/main...HEAD
+actionlint
+shellcheck .githooks/pre-commit
 ```
 
 Install the local hook once:
