@@ -1,10 +1,25 @@
-# GitHub Ruleset (apply after publication approval)
+# GitHub Rulesets
 
-Target `main` and release tags.
+Applied to [strataga/readyray](https://github.com/strataga/readyray) on 2026-08-27 and read back through the GitHub API.
+
+## Main branch
+
+Ruleset: `Protect main` (`21696610`)
+
+Target: `refs/heads/main`
 
 - Require pull requests after the seed commit; zero approvals for the solo-maintainer stage, but all conversations must resolve.
-- Require signed commits, linear history, current branches, and required checks: `CI / check`, `CodeQL / analyze`, `Dependency Review`, and `Security / gitleaks`.
-- Block force pushes and deletions. Restrict bypass to repository recovery and record any use.
-- Protect `v*` tags and GitHub environments. Release jobs use least-privilege OIDC and manual environment approval.
+- Require signed commits, linear history, and current branches.
+- Require the exact status-check contexts `check`, `analyze`, `review`, and `gitleaks`. These are provided by the `CI`, `CodeQL`, `Dependency Review`, and `Security` workflows respectively.
+- Block force pushes and deletions. No routine bypass actor is configured.
 
-After the remote exists, export/read back the ruleset and update this file with its identifier and exact required-check names. Ruleset mutation requires explicit approval.
+## Release tags
+
+Ruleset: `Protect release tags` (`21696611`)
+
+Target: `refs/tags/v*`
+
+- Require signed commits.
+- Block force updates and deletions.
+
+GitHub environment protection will be added with the first deployment workflow. Release jobs must use least-privilege OIDC and manual environment approval. Ruleset mutation requires explicit approval.

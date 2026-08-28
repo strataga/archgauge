@@ -30,7 +30,7 @@ Install the local hook once:
 git config core.hooksPath .githooks
 ```
 
-The seed commit is the only direct-to-`main` exception. Every later change uses a branch and pull request. Releases use Semantic Versioning and human-readable release notes. No remote repository or deployment exists yet.
+The seed commit is the only direct-to-`main` exception. Every later change uses a signed branch commit and pull request. Releases use Semantic Versioning and human-readable release notes. The public source is [github.com/strataga/readyray](https://github.com/strataga/readyray); no deployed service exists yet.
 
 ## Security
 
