@@ -1,8 +1,8 @@
-# ReadyRay
+# ArchGauge
 
-ReadyRay is an open-source architecture and production-readiness review platform. It is being designed to turn bounded repository evidence into cited findings, reproducible scores, explicit risks, and human-approved reports.
+ArchGauge is an open-source architecture and production-readiness review platform. It is being designed to turn bounded repository evidence into cited findings, reproducible scores, explicit risks, and human-approved reports.
 
-> Status: foundation only. No application review capability is implemented yet. Do not use this repository as evidence that ReadyRay is production-ready or deployable.
+> Status: foundation only. No application review capability is implemented yet. Do not use this repository as evidence that ArchGauge is production-ready or deployable.
 
 ## Product principles
 
@@ -17,11 +17,10 @@ See [the PRD](docs/PRD.md), [architecture overview](docs/architecture/overview.m
 
 ## Development
 
-ReadyRay uses Bun for workspace commands and Node.js 24 LTS in production.
+ArchGauge will use Bun for workspace commands and Node.js 24 LTS in production. The repository currently contains only its product and engineering foundation, so there are no application dependencies to install yet.
 
 ```bash
-bun install --frozen-lockfile
-bun run check
+git diff --cached --check
 ```
 
 Install the local hook once:
@@ -30,11 +29,11 @@ Install the local hook once:
 git config core.hooksPath .githooks
 ```
 
-The seed commit is the only direct-to-`main` exception. Every later change uses a signed branch commit and pull request. Releases use Semantic Versioning and human-readable release notes. The public source is [github.com/strataga/readyray](https://github.com/strataga/readyray); no deployed service exists yet.
+The seed commit is the only direct-to-`main` exception. Every later change uses a signed branch commit and pull request. Releases use Semantic Versioning and human-readable release notes. The public source is [github.com/strataga/archgauge](https://github.com/strataga/archgauge); no deployed service exists yet.
 
 ## Security
 
-Do not report vulnerabilities in public issues. Follow [SECURITY.md](SECURITY.md). ReadyRay is not a certification, compliance opinion, or substitute for professional judgment.
+Do not report vulnerabilities in public issues. Follow [SECURITY.md](SECURITY.md). ArchGauge is not a certification, compliance opinion, or substitute for professional judgment.
 
 ## License
 

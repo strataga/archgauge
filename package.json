@@ -1,12 +1,8 @@
 {
-  "name": "readyray",
+  "name": "archgauge",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "packageManager": "bun@1.4.0",
-  "engines": { "node": ">=24 <25" },
-  "scripts": {
-    "check:repo": "bun scripts/check-repository.ts",
-    "check": "bun run check:repo"
-  }
+  "engines": { "node": ">=24 <25" }
 }
