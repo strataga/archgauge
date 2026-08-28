@@ -15,6 +15,22 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1; credentials disabled below
         with:
           persist-credentials: false
+      - name: Detect application source
+        id: source
+        run: |
+          source_file=$(find . -type f \( -name '*.js' -o -name '*.jsx' -o -name '*.mjs' -o -name '*.cjs' -o -name '*.ts' -o -name '*.tsx' -o -name '*.mts' -o -name '*.cts' \) \
+            ! -path './.git/*' ! -path './node_modules/*' \
+            \( ! -path './.github/*' -o -path './.github/actions/*' \) -print -quit)
+          if [ -n "$source_file" ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Explain foundation-stage result
+        if: steps.source.outputs.present != 'true'
+        run: echo "::notice::No application JavaScript or TypeScript exists yet; CodeQL will run when source is added."
       - uses: github/codeql-action/init@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        if: steps.source.outputs.present == 'true'
         with: { languages: javascript-typescript }
       - uses: github/codeql-action/analyze@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        if: steps.source.outputs.present == 'true'
