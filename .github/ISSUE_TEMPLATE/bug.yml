@@ -1,5 +1,5 @@
 name: Bug report
-description: Report reproducible ReadyRay behavior
+description: Report reproducible ArchGauge behavior
 body:
   - type: textarea
     id: observed

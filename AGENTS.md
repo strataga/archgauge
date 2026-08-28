@@ -1,4 +1,4 @@
-# ReadyRay Agent Guide
+# ArchGauge Agent Guide
 
 Global instructions apply. Read `docs/PRD.md`, `docs/architecture/overview.md`, and relevant ADRs before implementation.
 
@@ -9,6 +9,6 @@ Global instructions apply. Read `docs/PRD.md`, `docs/architecture/overview.md`, 
 - Security: deny by default; never execute submitted code; never commit secrets or private career/GSD/Beads/customer material.
 - Workflow: the seed commit is the sole direct-main exception. All later changes use signed commits and pull requests.
 - Releases: SemVer, changelog, human release notes, checksums, CycloneDX SBOM, signatures, attestations.
-- Minimum checks: `bun run check`. Coverage is at least 80% once code exists.
+- Minimum check while the repository contains only its foundation: `git diff --cached --check` before commit. Add stack-specific lint, type, test, and build commands with the first application code. Coverage is at least 80% once code exists.
 
 Remote creation, rulesets, domains, provider settings, cloud spend, billing, credentials, and deployment require explicit approval.

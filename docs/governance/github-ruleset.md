@@ -1,6 +1,6 @@
 # GitHub Rulesets
 
-Applied to [strataga/readyray](https://github.com/strataga/readyray) on 2026-08-27 and read back through the GitHub API.
+Applied to [strataga/archgauge](https://github.com/strataga/archgauge) on 2026-08-27 and read back through the GitHub API. The repository was renamed from `strataga/readyray` on the same date; the ruleset identifiers and protections were preserved.
 
 ## Main branch
 

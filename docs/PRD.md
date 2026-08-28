@@ -1,8 +1,8 @@
-# ReadyRay Product Requirements
+# ArchGauge Product Requirements
 
 ## Promise
 
-Given supported evidence, ReadyRay will inventory it without executing repository code, produce deterministic and optionally model-assisted cited findings, compute a versioned score, and require human review before publication.
+Given supported evidence, ArchGauge will inventory it without executing repository code, produce deterministic and optionally model-assisted cited findings, compute a versioned score, and require human review before publication.
 
 ## Initial users
 

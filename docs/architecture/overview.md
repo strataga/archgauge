@@ -1,6 +1,6 @@
 # Architecture Overview
 
-ReadyRay begins as a modular monolith with separate web, API, and worker processes around shared domain/application packages.
+ArchGauge begins as a modular monolith with separate web, API, and worker processes around shared domain/application packages.
 
 ## Bounded contexts
 
