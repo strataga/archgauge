@@ -22,7 +22,7 @@ ArchGauge will use Bun for workspace commands and Node.js 24 LTS in production. 
 ```bash
 git diff --check
 git diff --cached --check
-git diff --check origin/main...HEAD
+git diff --check origin/main...HEAD # committed branch changes
 actionlint
 shellcheck .githooks/pre-commit
 ```
